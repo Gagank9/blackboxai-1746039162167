@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seller Profile - Akshit Kapoor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-3xl w-full bg-white rounded-lg shadow-lg p-6">
+    <!-- Seller Header -->
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+      <img src="https://pyng.co.in/static/media/akshit-kapoor.12345678.jpg" alt="Akshit Kapoor" class="w-32 h-32 rounded-full object-cover border-4 border-indigo-500" />
+      <div class="flex-1">
+        <h1 class="text-3xl font-semibold text-gray-900">Akshit Kapoor</h1>
+        <p class="mt-2 text-indigo-600 font-medium">Top Astrology And Numerology Online</p>
+        <p class="mt-2 text-gray-700">Areas of Expertise: Astrology, Numerology, Vastu, Palmistry</p>
+        <!-- Social Media -->
+        <div class="mt-4 flex space-x-4 text-indigo-600">
+          <a href="https://www.facebook.com/akshit.kapoor" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-800 transition">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/akshit.kapoor" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-800 transition">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://twitter.com/akshit_kapoor" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-800 transition">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/akshit-kapoor" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-800 transition">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collapsible Sections -->
+    <div class="mt-8 space-y-6">
+      <!-- Ask any Section -->
+      <section>
+        <button aria-expanded="false" aria-controls="ask-any-content" class="w-full flex justify-between items-center bg-indigo-100 text-indigo-800 font-semibold px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" onclick="toggleCollapse('ask-any-content', this)">
+          Ask any:
+          <i class="fas fa-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div id="ask-any-content" class="mt-2 hidden px-4">
+          <ul class="space-y-2 text-gray-700">
+            <li>1. Ask 1 Question - ₹99</li>
+            <li>2. Ask 2 Questions - ₹169</li>
+            <li>3. Ask 3 Questions - ₹249</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Meeting Products Section -->
+      <section>
+        <button aria-expanded="false" aria-controls="meeting-products-content" class="w-full flex justify-between items-center bg-indigo-100 text-indigo-800 font-semibold px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" onclick="toggleCollapse('meeting-products-content', this)">
+          Meeting Products:
+          <i class="fas fa-chevron-down transition-transform duration-300"></i>
+        </button>
+        <div id="meeting-products-content" class="mt-2 hidden px-4">
+          <ul class="space-y-2 text-gray-700">
+            <li>1. 15 Mins</li>
+            <li>2. 30 Mins</li>
+            <li>3. 60 Mins</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- About Me Section -->
+    <section class="mt-8">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-3">About Me</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Akshit Kapoor is a renowned astrologer and numerologist with years of experience helping clients find clarity and guidance. Passionate about ancient wisdom and modern insights, Akshit offers personalized consultations tailored to your unique needs.
+      </p>
+    </section>
+  </div>
+
+  <script>
+    function toggleCollapse(id, button) {
+      const content = document.getElementById(id);
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !expanded);
+      content.classList.toggle('hidden');
+      const icon = button.querySelector('i.fas');
+      if (icon) {
+        icon.style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
+      }
+    }
+  </script>
+</body>
+</html>
